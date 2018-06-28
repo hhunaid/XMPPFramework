@@ -1,7 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "XMPPModule.h"
 
+#if __has_include(<KissXML.h>)
+#import "KissXML.h"
+#else
 @import KissXML;
+#endif
 
 #define _XMPP_BLOCKING_H
 

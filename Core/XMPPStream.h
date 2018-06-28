@@ -4,8 +4,16 @@
 #import "GCDMulticastDelegate.h"
 
 
+#if __has_include(<KissXML.h>)
+#import "KissXML.h"
+#else
 @import KissXML;
+#endif
+#if __has_include(<CocoaAsyncSocket/GCDAsyncSocket.h>)
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+#else
 @import CocoaAsyncSocket;
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

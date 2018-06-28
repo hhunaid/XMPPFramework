@@ -1,7 +1,11 @@
 #import "TURNSocket.h"
 #import "XMPP.h"
 #import "XMPPLogging.h"
+#if __has_include(<CocoaAsyncSocket/GCDAsyncSocket.h>)
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+#else
 @import CocoaAsyncSocket;
+#endif
 #import "NSData+XMPP.h"
 #import "NSNumber+XMPP.h"
 

@@ -1,6 +1,10 @@
 #import <Foundation/Foundation.h>
 
+#if __has_include(<KissXML.h>)
+#import "KissXML.h"
+#else
 @import KissXML;
+#endif
 
 /**
  * The XMPPResultSet class represents an <set xmlns='http://jabber.org/protocol/rsm'> element form XEP-0059.

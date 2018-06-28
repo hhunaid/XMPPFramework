@@ -1,6 +1,10 @@
 #import <Foundation/Foundation.h>
 
+#if __has_include(<KissXML.h>)
+#import "KissXML.h"
+#else
 @import KissXML;
+#endif
 
 @class XMPPIQ;
 @class XMPPMessage;

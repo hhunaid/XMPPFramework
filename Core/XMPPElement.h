@@ -1,8 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "XMPPJID.h"
 
+#if __has_include(<KissXML.h>)
+#import "KissXML.h"
+#else
 @import KissXML;
-
+#endif
 NS_ASSUME_NONNULL_BEGIN
 
 /**

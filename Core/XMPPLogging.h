@@ -59,7 +59,11 @@
  * If you created your project with a previous version of Xcode, you may need to add the DEBUG macro manually.
 **/
 
+#if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#else
 @import CocoaLumberjack;
+#endif
 
 // Global flag to enable/disable logging throughout the entire xmpp framework.
 

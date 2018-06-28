@@ -1,5 +1,10 @@
 #import "XMPPStringPrep.h"
+#if __has_include(<libidn.h>)
+#import "libidn.h"
+#else
 @import libidn;
+#endif
+
 
 
 @implementation XMPPStringPrep

@@ -8,7 +8,11 @@
 #import "XMPPModule.h"
 #import "TURNSocket.h"
 
+#if __has_include(<CocoaAsyncSocket/GCDAsyncSocket.h>)
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+#else
 @import CocoaAsyncSocket;
+#endif
 
 @class XMPPIDTracker;
 
